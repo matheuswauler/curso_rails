@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CursoRails</title>
+		<%= csrf_meta_tags %>
+		<%= csp_meta_tag %>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Dosis:400,700|Roboto:300,400,700,900" rel="stylesheet">
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+	</head>
+
+	<body>
+		<header id="main-header">
+			<nav class="handy-links">
+				<div class="content">
+					<a class="status-pedido">STATUS DO PEDIDO</a>
+					<a class="cadastro-newsletter">CADASTRO DA NEWSLETTER</a>
+					<a class="identifique-se">IDENTIFIQUE-SE</a>
+				</div>
+			</nav>
+			<div class="content">
+				<div class="header-container">
+					<div class="logo-wrapper">
+						<%= link_to '/' do %>
+							<%= image_tag 'logo.svg' %>
+						<% end %>
+					</div>
+
+					<div class="header-menu">
+						<nav class="site-menu">
+							<a href="#">HOMEM</a>
+							<a href="#">MULHER</a>
+							<a href="#">KIDS</a>
+							<a href="#" class="sport">ESPORTES</a>
+							<a href="#">MARCAS</a>
+							<a href="#" class="personalization">PERSONALIZAÇÃO</a>
+						</nav>
+
+						<div class="site-services">
+							<form class="site-search">
+								<input type="search" placeholder="procurar" name="q" />
+							</form>
+							<a id="shopping-bag">0</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<%= yield %>
+		</main>
+
+		<footer>
+			<div class="newsletter">
+				<div class="content">
+					<p>CADASTRE-SE, FIQUE POR DENTRO DAS NOVIDADES E GANHE <span>15% de desconto</span></p>
+					<form>
+						<input type="email" placeholder="SEU E-MAIL" />
+						<input type="submit" value="CADASTRAR" />
+					</form>
+				</div>
+			</div>
+
+			<div class="main-footer">
+				<div class="content">
+					<div class="foreign-links">
+						<ul>
+							<li><p>PÁGINAS ESPECIAIS</p></li>
+							<li>&nbsp;</li>
+							<li><a href="/novidades" title="Novidades" manual_cm_sp="footer-_-páginas especiais-_-novidades">Novidades</a></li>
+							<li><a href="/outlet" title="Outlet" manual_cm_sp="footer-_-páginas especiais-_-outlet">Outlet</a></li>
+							<li><a href="/sneakersdasemana" manual_cm_sp="footer-_-páginas especiais-_-sneakers da semana">Sneakers da Semana&nbsp;</a></li>
+							<li><a href="/black-friday" title="Black Friday" manual_cm_sp="footer-_-páginas especiais-_-black friday">Black Friday</a></li>
+							<li><a href="/cyber-monday" title="Cyber Monday" manual_cm_sp="footer-_-páginas especiais-_-cyber monday">Cyber Monday</a></li>
+							<li>&nbsp;</li>
+							
+							<li><a href="/calcados" manual_cm_sp="footer-_-páginas especiais-_-tênis">Tênis</a></li>
+							<li><a href="/roupas" manual_cm_sp="footer-_-páginas especiais-_-roupas">Roupas</a></li>
+							<li><a href="/acessorios" manual_cm_sp="footer-_-páginas especiais-_-acessorios">Acessorios</a></li>
+							<li><a href="/blusao_quebra_vento" manual_cm_sp="footer-_-páginas especiais-_-corta vento">Corta vento</a></li>
+							<li>&nbsp;</li>
+							
+							<li><a href="/adidasrunners" title="adidas Runners" manual_cm_sp="footer-_-páginas especiais-_-adidas runners">adidas Runners</a></li>
+							<li><a href="https://www.adidas.com.br/como-lavar-tenis-de-corrida.html" title="Lavar Tenis de Corrida" manual_cm_sp="footer-_-páginas especiais-_-lavar tenis de corrida">Lavar Tenis de Corrida</a></li>
+						</ul>
+						
+						<ul>
+							<li><p>COLEÇÃO</p></li>
+							<li>&nbsp;</li>
+							<li><a href="/copa_do_mundo" title="Copa do Mundo FIFA 2018" manual_cm_sp="footer-_-coleção-_-copa do mundo fifa 2018">Copa do Mundo FIFA 2018</a></li>
+							<li><a href="/copa-do-mundo-sitemap.html" title="Todas as Seleções" manual_cm_sp="footer-_-coleção-_-todas as seleções">Todas as Seleções</a></li>
+							<li><a href="/coritiba" title="Coritiba" manual_cm_sp="footer-_-coleção-_-coritiba">Coritiba</a></li>
+							<li><a href="/flamengo" title="Flamengo" manual_cm_sp="footer-_-coleção-_-flamengo">Flamengo</a></li>
+							<li><a href="/palmeiras" title="Palmeiras" manual_cm_sp="footer-_-coleção-_-palmeiras">Palmeiras</a></li>
+							<li><a href="/ponte_preta" title="Ponte Preta" manual_cm_sp="footer-_-coleção-_-ponte preta">Ponte Preta</a></li>
+							<li><a href="/sport_recife" title="Sport Recife" manual_cm_sp="footer-_-coleção-_-sport recife">Sport Recife</a></li>
+							<li><a href="/predator" manual_cm_sp="footer-_-coleção-_-predator">Predator</a></li>
+							<li><a href="/real_madrid" manual_cm_sp="footer-_-coleção-_-real madrid">Real Madrid</a></li>
+							<li><a href="/juventus" manual_cm_sp="footer-_-coleção-_-juventus">Juventus</a></li>
+							<li>&nbsp;</li>
+
+							<li><a href="https://ssf.adidas.com/cep/dc.action?campaignId=3021&amp;country=BR&amp;lid=PT" target="_blank" manual_cm_sp="footer-_-coleção-_-yeezy">Yeezy</a></li>
+							<li><a href="/originals-tubular" manual_cm_sp="footer-_-coleção-_-tubular">Tubular</a></li>
+							<li><a href="/farm?grid=true" manual_cm_sp="footer-_-coleção-_-farm">Farm</a></li>
+							<li><a href="/boost" manual_cm_sp="footer-_-coleção-_-boost">Boost</a></li>
+						</ul>
+						
+						<ul>
+							<li><p>PRIVACIDADE &amp; TERMOS</p></li>
+							<li>&nbsp;</li>
+							<li><a href="https://www.adidas.com.br/help-topics-privacy_policy.html" title="Politica de privacidade" manual_cm_sp="footer-_-privacidade &amp; termos-_-politica de privacidade">Politica de privacidade</a></li>
+							<li><a href="https://www.adidas.com.br/help-topics-terms_and_conditions.html" title="Termos e condições" manual_cm_sp="footer-_-privacidade &amp; termos-_-termos e condições">Termos e condições</a></li>
+							<li><a href="/YESadidas.html" manual_cm_sp="footer-_-privacidade &amp; termos-_-termos e condições #yesadidas">Termos e Condições #YESadidas</a></li>
+							<li><a href="/regulamento-influenciadores.html" manual_cm_sp="footer-_-privacidade &amp; termos-_-termos influenciadores">Termos Influenciadores</a></li>
+						</ul>
+						
+						<ul>
+							<li><p>INFORMAÇÕES CORPORATIVAS</p></li>
+							<li>&nbsp;</li>
+							<li><a href="http://www.adidas-group.com/en/group/profile/" rel="nofollow" title="Sobre nós" manual_cm_sp="footer-_-informações corporativaslojas-_-sobre nós">Sobre nós</a></li>
+							<li><a href="http://careers.adidas-group.com/?brand=adidas" rel="nofollow" title="Carreiras" manual_cm_sp="footer-_-informações corporativaslojas-_-carreiras">Carreiras</a></li>
+							<li><a href="http://www.adidas-group.com/en/media/media-contact/" rel="nofollow" title="Imprensa" manual_cm_sp="footer-_-informações corporativaslojas-_-imprensa">Imprensa</a></li>
+							<li><a href="http://www.suafranquia.com/franquias/vestuario/roupas-e-acessorios/franquia-adidas/" rel="nofollow" title="Seja um franqueado" manual_cm_sp="footer-_-informações corporativaslojas-_-seja um franqueado">Seja um franqueado</a></li>
+							<li><a href="/Projetos-Sociais.html" rel="nofollow" title="Ginga Social" manual_cm_sp="footer-_-informações corporativaslojas-_-ginga social">Ginga Social</a></li>
+							<li>&nbsp;</li>
+
+							<li><p>LOJAS</p></li>
+							<li>&nbsp;</li>
+							<li><a href="/storefinder/" title="Localizador de loja" manual_cm_sp="footer-_-informações corporativaslojas-_-localizador de lojas">Localizador de lojas</a></li>
+						</ul>
+						
+						<ul>
+							<li><p>SUPORTE AO CLIENTE</p></li>
+							<li>&nbsp;</li>
+							<li><a href="/customer-service-landing.html" title="Atendimento ao cliente" manual_cm_sp="footer-_-suporte ao cliente-_-atendimento ao cliente">Atendimento ao cliente</a></li>
+							<li><a href="/tabela-de-tamanhos.html" manual_cm_sp="footer-_-suporte ao cliente-_-tabela de tamanhos">Tabela de Tamanhos</a></li>
+							<li><a href="https://www.adidas.com.br/help-topics-FAQ.html" title="Dúvidas frequentes" manual_cm_sp="footer-_-suporte ao cliente-_-dúvidas frequentes">Dúvidas frequentes</a></li>
+							<li><a href="https://www.adidas.com.br/on/demandware.store/Sites-adidas-BR-Site/pt_BR/CustomerService-ContactUs" manual_cm_sp="footer-_-suporte ao cliente-_-contate-nos">Contate-nos</a></li>
+							<li><a href="https://www.adidas.com.br/help-topics-returning.html" title="Troca e devolução" manual_cm_sp="footer-_-suporte ao cliente-_-troca e devolução">Troca e devolução</a></li>
+							<li><a href="https://www.adidas.com.br/help-topics-shipping.html" title="Entrega" manual_cm_sp="footer-_-suporte ao cliente-_-entregas e frete">Entregas e Frete</a></li>
+							<li><a href="https://www.adidas.com.br/help-topics-payment.html" title="Opções de Pagamento" manual_cm_sp="footer-_-suporte ao cliente-_-opções de pagamento">Opções de Pagamento</a></li>
+							<li><a href="https://www.adidas.com.br/help-topics-adidas_products.html" title="Produtos adidas" manual_cm_sp="footer-_-suporte ao cliente-_-produtos adidas">Produtos adidas</a></li>
+							<li><a href="https://www.adidas.com.br/help-topics-sitemap.html" title="Mapa do Site" manual_cm_sp="footer-_-suporte ao cliente-_-mapa do site">Mapa do Site</a></li>
+						</ul>
+					</div>
+
+					<div class="payment-methods">
+						<span>Formas de pagamento:</span>
+						<%= image_tag 'payment.png' %>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<div class="content">
+					ADIDAS DO BRASIL LTDS., inscrita no Cadastro Nacional de Pessoas Jurídicas ("CNPJ/MF") sob o nº 42.274.696/0025.61, no endereço Rua<br/ >
+					Pataxós nº 241, Galpão 1, Bairro Jardim Magali, Município de Embú - SP, CEP 06833-073.
+				</div>
+			</div>
+		</footer>
+
+		<div class="cart-lightbox">
+			<span class="close-button"></span>
+			<div class="empty-cart">SEU CARRINHO ESTÁ VAZIO</div>
+
+			<div class="cart-content">
+				<h3>Sua sacola</h3>
+
+				<div class="shop-products"><table></table></div>
+
+				<div class="cart-footer">
+					<a class="keep-shopping">CONTINUAR COMPRANDO</a>
+					<div id="cart-total"></div>
+					<a class="purchase">FINALIZAR PEDIDO</a>
+				</div>
+			</div>
+		</div>
+		<div class="overlay"/>
+
+		<div class="loader"/>
+	</body>
+
+	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</html>
